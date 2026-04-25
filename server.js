@@ -13,8 +13,10 @@ app.get("/", (req, res) => {
   res.send("Task Manager API is running 🚀");
 });
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
 
 app.use("/api/auth", authRoutes);
 app.use("/tasks", taskRoutes);
