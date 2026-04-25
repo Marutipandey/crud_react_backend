@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(cors({
-  origin: "*",
+  origin: "https://crud-react-frantend-23qc.vercel.app/",
   credentials: true
 }));
 app.use(express.json());
