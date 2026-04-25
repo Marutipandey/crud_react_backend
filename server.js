@@ -9,6 +9,10 @@ const taskRoutes = require("./routes/taskRoutes");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Task Manager API is running 🚀");
+});
+
 app.use(cors());
 app.use(express.json());
 
