@@ -14,10 +14,12 @@ app.get("/", (req, res) => {
 });
 
 app.use(cors({
-  origin: "https://crud-react-frantend-23qc.vercel.app/",
+  origin: "https://crud-react-frantend-23qc.vercel.app",
   credentials: true
 }));
+
 app.use(express.json());
+
 
 app.use("/api/auth", authRoutes);
 app.use("/tasks", taskRoutes);
